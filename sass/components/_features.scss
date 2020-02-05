@@ -1,0 +1,59 @@
+/* Features Component */
+
+.features {
+  width: 100%;
+  border-bottom: 1px solid $color-grey--border;
+  padding: em(100) 0;
+
+  @include mq(md, max) {
+    padding: em(30) 0;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+
+    @include mq(md, max) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px solid $color-grey--border;
+    padding: em(50) em(20);
+    text-align: center;
+    color: $color-dark;
+    border-radius: 5px;
+
+    &--active {
+      background: $color-blue;
+      color: $color-light;
+      transform: scale(1.05);
+      border: none;
+
+      @include mq(md, max) {
+        transform: none;
+      }
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: em(30);
+  }
+
+  &__heading {
+    font-size: em(22);
+    padding-bottom: em(25, 22);
+    font-weight: 500;
+  }
+
+  &__text {
+    line-height: 1.5;
+  }
+}

@@ -1,0 +1,61 @@
+/* Footer Component */
+
+.footer {
+  width: 100%;
+  padding: em(40) 0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq(xl, max) {
+      flex-direction: column;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    @include mq(xl, max) {
+      flex-direction: column;
+    }
+  }
+
+  &__nav {
+    padding-left: em(30);
+
+    @include mq(md, max) {
+      padding: em(35) 0;
+    }
+
+    @include mq(xl, max) {
+      padding: em(20) 0;
+    }
+
+    & > .nav {
+      @include mq(md, max) {
+        flex-direction: column;
+      }
+    }
+
+    & .nav__item {
+      @include mq(md, max) {
+        padding-bottom: em(20);
+      }
+    }
+  }
+
+  &__phone,
+  &__email {
+    font-size: em(14);
+    font-weight: 700;
+    color: $color-dark;
+    padding: 0 em(15, 14);
+  }
+
+  &__phone {
+    border-right: 2px solid $color-dark;
+  }
+}

@@ -1,0 +1,107 @@
+/* Header Component */
+
+.header {
+  width: 100%;
+  background: url('../header-bg.png');
+  background-size: cover;
+  background-position: center;
+  padding-top: em(35);
+  padding-bottom: em(270);
+
+  @include mq(lg, max) {
+    padding-bottom: em(150);
+  }
+
+  @include mq(sm, max) {
+    padding-bottom: em(75);
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav {
+    &:first-of-type {
+      padding-left: em(40);
+    }
+    @include mq(xl, max) {
+      display: none;
+    }
+  }
+
+  &__icon {
+    color: $color-light;
+    padding-left: em(30);
+
+    @include mq(xl, max) {
+      display: none;
+    }
+  }
+
+  &__content {
+    padding-top: em(230);
+    color: $color-light;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    @include mq(lg, max) {
+      padding-top: em(150);
+    }
+
+    @include mq(sm, max) {
+      padding-top: em(75);
+    }
+  }
+
+  &__heading {
+    font-size: em(36);
+    font-weight: 900;
+    padding-bottom: em(30, 36);
+  }
+
+  &__text {
+    font-size: em(18);
+    padding: 0 em(100, 18);
+    padding-bottom: em(50, 18);
+    line-height: 1.5;
+    font-family: 'Raleway', sans-serif;
+
+    @include mq(lg, max) {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &__button-wrapper {
+    display: flex;
+
+    @include mq(sm, max) {
+      flex-direction: column;
+    }
+
+    & > .btn {
+      margin: em(10, 18);
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    color: $color-light;
+    font-size: em(24);
+    margin-left: em(20, 24);
+    cursor: pointer;
+
+    @include mq(xl, max) {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+/* Partners Component */
+
+.partners {
+  width: 100%;
+  border-bottom: 1px solid $color-grey--border;
+
+  &__list {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: em(30) 0;
+
+    @include mq(lg, max) {
+      flex-wrap: wrap;
+    }
+  }
+  &__item {
+    padding: 0 em(60);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq(lg, max) {
+      flex-basis: 50%;
+      padding: em(40);
+    }
+
+    @include mq(sm, max) {
+      flex-basis: 100%;
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    height: auto;
+  }
+}

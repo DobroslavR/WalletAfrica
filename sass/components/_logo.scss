@@ -1,0 +1,17 @@
+/* Logo Component */
+
+.logo {
+  font-size: em(26);
+  color: $color-light;
+
+  &__bold {
+    font-weight: 900;
+    &--colorful {
+      color: $color-blue;
+    }
+  }
+
+  &--grey {
+    color: $color-grey--font;
+  }
+}

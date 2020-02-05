@@ -1,0 +1,35 @@
+/* Button Component */
+
+.btn {
+  font-size: em(18);
+  padding: em(15, 18) em(30, 18);
+  color: $color-light;
+  border-radius: 5px;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+
+  &--primary {
+    background: $color-blue--light;
+
+    &:hover {
+      background: darken($color-blue--light, 3.5%);
+    }
+  }
+
+  &--secondary {
+    border: 1px solid $color-light;
+
+    &:hover {
+      background: $color-light;
+      color: $color-dark;
+    }
+  }
+
+  &--tertiary {
+    background: $color-green;
+
+    &:hover {
+      background: darken($color-green, 3.5%);
+    }
+  }
+}
